@@ -1,6 +1,7 @@
 package lab7_2;
 
+// Withdrawable.java
 public interface Withdrawable {
-    public abstract boolean withdraw(double amount);
+    public boolean withdraw(double amount);
 }
 

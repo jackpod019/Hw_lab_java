@@ -1,35 +1,28 @@
 package lab7_2;
 
+// DebitCard.java
+// DebitCard เป็น Subclass ของ Card
 public class DebitCard extends Card {
-    private String number;
-    private String type;
-    private double discountRate = 0.025; // ส่วนลด 2.5%
-
-    public DebitCard(String type, String number) {
-        this.type = type;
-        this.number = number;
+    
+    public DebitCard(String cardNumber) {
+        super(cardNumber);
     }
 
+    // Implement Abstract Method
     @Override
     public String type() {
-        return type;
+        return "visa"; 
     }
 
-    public String getNumber() {
-        return number;
-    }
-
+    // Implement Abstract Method
     @Override
     public double discount() {
-        return discountRate;
+        return 0.025; // 2.5%
     }
-
+    
+    // Implement Withdrawable (ตามข้อกำหนดของ Abstract Class Card)
     @Override
     public boolean withdraw(double amount) {
-        // DebitCard ไม่หักเงินโดยตรง ให้ SavingAccount จัดการ
-        return false;
+        return false; // ไม่ได้ใช้การถอนผ่านบัตรในโจทย์นี้
     }
-}
-for(int t:Arratlist<int>) {
-	get
 }
